@@ -45,14 +45,14 @@ char	*strjoin(char *dst, char *s)
 		dst = dst_null(dst);
 	res = (char *)malloc((ft_strlen(s) + ft_strlen(dst) + 1) * sizeof(char));
 	if (!res)
-	{
-		free(dst);
-		return (NULL);
-	}
+		return (free(dst), NULL);
 	i = -1;
 	j = -1;
-	while (dst[++i])
-		res[i] = dst[i];
+	if (dst)
+	{
+		while (dst[++i])
+			res[i] = dst[i];
+	}
 	while (s[++j])
 		res[i++] = s[j];
 	res[i] = '\0';
