@@ -47,6 +47,8 @@ int main(int ac, char **av)
 
 ## Usage
 
+Add `main.c` next to all the `.c` file.
+
 ```sh
 cc -Wall -Wextra -Werror main.c get_next_line_utils.c get_next_line.c
 ```
