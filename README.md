@@ -16,6 +16,7 @@ Functions authorized : `malloc`, `read`and `free`.
 
 ## `main.c`
 
+```C
 	#include <stdio.h>
 	#include <fcntl.h>
 	#include "get_next_line.h"
@@ -42,6 +43,7 @@ Functions authorized : `malloc`, `read`and `free`.
 		close(fd);
 		return (0);
 	}
+```
 
 ## Usage
 
