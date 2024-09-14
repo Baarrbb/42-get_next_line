@@ -14,7 +14,7 @@ The function has to return a `char *` containing a line from the file descriptor
 
 Functions authorized : `malloc`, `read`and `free`.
 
-## Example `main.c`
+## `main.c`
 
 	#include <stdio.h>
 	#include <fcntl.h>
@@ -45,7 +45,10 @@ Functions authorized : `malloc`, `read`and `free`.
 
 ## Usage
 
-	cc -Wall -Wextra -Werror main.c get_next_line_utils.c get_next_line.c
+```sh
+cc -Wall -Wextra -Werror main.c get_next_line_utils.c get_next_line.c
+```
 
-	./a.out main.c
-
+```sh
+./a.out main.c
+```
