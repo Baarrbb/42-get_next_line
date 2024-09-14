@@ -12,7 +12,7 @@ Introduction to a new concept : `static` variables.
 
 The function has to return a `char *` containing a line from the file descriptor given. A loop on the function let us read the file pointed by the file descriptor.
 
-Functions authorized : `malloc`, `read`and `free`.
+Functions authorized : `malloc`, `read` and `free`.
 
 ## `main.c`
 
