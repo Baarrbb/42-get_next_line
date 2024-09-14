@@ -17,32 +17,32 @@ Functions authorized : `malloc`, `read`and `free`.
 ## `main.c`
 
 ```C
-	#include <stdio.h>
-	#include <fcntl.h>
-	#include "get_next_line.h"
+#include <stdio.h>
+#include <fcntl.h>
+#include "get_next_line.h"
 
-	int main(int ac, char **av)
+int main(int ac, char **av)
+{
+	if (ac != 2)
 	{
-		if (ac != 2)
-		{
-			printf("Usage:\n./a.out <filename>\n");
-			return (1);
-		}
-		int fd = open(av[1], O_RDONLY);
-		if (fd == -1)
-		{
-			fprintf(stderr, "Problem opening file\n");
-			return (1);
-		}
-		char *line;
-		while((line = get_next_line(fd)))
-		{
-			printf("%s", line);
-			free(line);
-		}
-		close(fd);
-		return (0);
+		printf("Usage:\n./a.out <filename>\n");
+		return (1);
 	}
+	int fd = open(av[1], O_RDONLY);
+	if (fd == -1)
+	{
+		fprintf(stderr, "Problem opening file\n");
+		return (1);
+	}
+	char *line;
+	while((line = get_next_line(fd)))
+	{
+		printf("%s", line);
+		free(line);
+	}
+	close(fd);
+	return (0);
+}
 ```
 
 ## Usage
